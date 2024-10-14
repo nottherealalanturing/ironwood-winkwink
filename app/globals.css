@@ -7,18 +7,23 @@
   --foreground: #171717;
 }
 
+@font-face {
+  font-family: 'CamptonLight';
+  src: url('./assets/fonts/CamptonLight.otf');
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #000000;
     --foreground: #ededed;
   }
 }
 
-body {
+/* body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
+} */
 
 @layer utilities {
   .text-balance {
