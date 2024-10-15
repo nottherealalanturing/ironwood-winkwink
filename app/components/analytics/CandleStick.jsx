@@ -70,10 +70,9 @@ const CandlestickChart = () => {
       chart: {
         type: 'candlestick',
         height: 350,
-      },
-      title: {
-        text: 'Revenue Performance',
-        align: 'left',
+        toolbar: {
+          show: false,
+        },
       },
       xaxis: {
         type: 'datetime',
@@ -83,14 +82,14 @@ const CandlestickChart = () => {
       },
       yaxis: {
         labels: {
-          formatter: (val) => `N ${val / 1000}K`, // Format axis labels to show values in thousands (N 1K)
+          formatter: (val) => `N ${val / 1000}K`,
         },
       },
       plotOptions: {
         candlestick: {
           colors: {
-            upward: '#14213d', // Dark blue for upward candles
-            downward: '#f4a261', // Orange for downward candles
+            upward: '#14213d',
+            downward: '#f4a261',
           },
         },
       },
