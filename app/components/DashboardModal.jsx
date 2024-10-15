@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import { Button, Modal } from 'flowbite-react';
 import bammod from '../assets/images/dmodal.png';
 import Image from 'next/image';
-import { Progress } from 'flowbite-react';
 import DashboardModalTable from './DashboardModalTable';
 
 const DashboardModal = ({
