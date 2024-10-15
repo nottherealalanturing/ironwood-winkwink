@@ -118,6 +118,112 @@ export const TransactionsIcon = () => (
   </svg>
 );
 
+export const CreditIcon = () => (
+  <svg
+    width="24"
+    height="27"
+    viewBox="0 0 24 27"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M24 3.00065H15.76C15.2 1.45398 13.7333 0.333984 12 0.333984C10.2667 0.333984 8.8 1.45398 8.24 3.00065H0V27.0006H24V3.00065ZM12 3.00065C12.7333 3.00065 13.3333 3.60065 13.3333 4.33398C13.3333 5.06732 12.7333 5.66732 12 5.66732C11.2667 5.66732 10.6667 5.06732 10.6667 4.33398C10.6667 3.60065 11.2667 3.00065 12 3.00065ZM12 23.0007L5.33333 16.334H9.33333V11.0007H14.6667V16.334H18.6667L12 23.0007Z"
+      fill="#161718"
+    />
+  </svg>
+);
+
+export const DebitIcon = () => (
+  <svg
+    width="24"
+    height="27"
+    viewBox="0 0 24 27"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 3.00065H8.24C8.8 1.45398 10.2667 0.333984 12 0.333984C13.7333 0.333984 15.2 1.45398 15.76 3.00065H24V27.0006H0V3.00065ZM12 3.00065C11.2667 3.00065 10.6667 3.60065 10.6667 4.33398C10.6667 5.06732 11.2667 5.66732 12 5.66732C12.7333 5.66732 13.3333 5.06732 13.3333 4.33398C13.3333 3.60065 12.7333 3.00065 12 3.00065ZM6.66667 19.0007H12V23.0007L18.6667 16.334L12 9.66732V13.6673H6.66667V19.0007Z"
+      fill="#161718"
+    />
+  </svg>
+);
+
+export const CreditSurgeIcon = () => (
+  <svg
+    width="24"
+    height="14"
+    viewBox="0 0 24 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M16.6666 0L19.3383 2.67167L13.6449 8.365L8.97825 3.69833L0.333252 12.355L1.97825 14L8.97825 7L13.6449 11.6667L20.9949 4.32833L23.6666 7V0H16.6666Z"
+      fill="#34A853"
+    />
+  </svg>
+);
+
+export const LoanedOutTRNIcon = () => (
+  <svg
+    width="36"
+    height="36"
+    viewBox="0 0 36 36"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="18" cy="18" r="18" fill="#EBF5FF" />
+    <g clip-path="url(#clip0_1167_63554)">
+      <path
+        d="M15.5007 12.168V13.8346H20.9923L11.334 23.493L12.509 24.668L22.1673 15.0096V20.5013H23.834V12.168H15.5007Z"
+        fill="#002448"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1167_63554">
+        <rect width="20" height="20" fill="white" transform="translate(8 8)" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const RevenueTRNIcon = () => (
+  <svg
+    width="36"
+    height="36"
+    viewBox="0 0 36 36"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="18" cy="18" r="18" fill="#FFE8DC" />
+    <g clip-path="url(#clip0_1167_63569)">
+      <path
+        d="M20.4993 23.832V22.1654H15.0077L24.666 12.507L23.491 11.332L13.8327 20.9904V15.4987H12.166V23.832H20.4993Z"
+        fill="#FF8D4E"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_1167_63569">
+        <rect width="20" height="20" fill="white" transform="translate(8 8)" />
+      </clipPath>
+    </defs>
+  </svg>
+);
+
+export const DebitSurgeIcon = () => (
+  <svg
+    width="24"
+    height="14"
+    viewBox="0 0 24 14"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M16.6666 14L19.3383 11.3283L13.6449 5.635L8.97825 10.3017L0.333252 1.645L1.97825 0L8.97825 7L13.6449 2.33333L20.9949 9.67167L23.6666 7V14H16.6666Z"
+      fill="#EB4335"
+    />
+  </svg>
+);
+
 export const CustomersIcon = () => (
   <svg
     width="20"
