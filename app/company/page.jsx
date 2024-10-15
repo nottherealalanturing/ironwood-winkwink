@@ -1030,8 +1030,9 @@ const Dashboard = ({}) => {
             </div>
 
             <div className="grid grid-cols-4 gap-3">
-              {staffList.map((staff) => (
+              {staffList.map((staff, index) => (
                 <div
+                  key={index}
                   className="flex  items-center justify-between bg-[#F7F8F9] p-3"
                   onClick={() => router.push(`company/staff/${staff.staffID}`)}
                 >

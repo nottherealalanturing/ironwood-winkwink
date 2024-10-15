@@ -172,7 +172,7 @@ export const LoanedOutTRNIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="18" cy="18" r="18" fill="#EBF5FF" />
-    <g clip-path="url(#clip0_1167_63554)">
+    <g clipPath="url(#clip0_1167_63554)">
       <path
         d="M15.5007 12.168V13.8346H20.9923L11.334 23.493L12.509 24.668L22.1673 15.0096V20.5013H23.834V12.168H15.5007Z"
         fill="#002448"
@@ -195,7 +195,7 @@ export const RevenueTRNIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
   >
     <circle cx="18" cy="18" r="18" fill="#FFE8DC" />
-    <g clip-path="url(#clip0_1167_63569)">
+    <g clipPath="url(#clip0_1167_63569)">
       <path
         d="M20.4993 23.832V22.1654H15.0077L24.666 12.507L23.491 11.332L13.8327 20.9904V15.4987H12.166V23.832H20.4993Z"
         fill="#FF8D4E"

@@ -1427,8 +1427,9 @@ const CustomerPreview = ({ staff }) => {
             </button>
           </div>
           <div className="grid grid-cols-4 gap-3">
-            {customersList.map((customer) => (
+            {customersList.map((customer, index) => (
               <div
+                key={index}
                 className="flex items-center justify-between bg-[#F7F8F9] p-3 shadow-x hover:drop-shadow-lg"
                 onClick={() =>
                   router.push(
