@@ -1,14 +1,20 @@
 'use client';
+import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 
-import React from 'react';
-import Chart from 'react-apexcharts';
+const Chart = dynamic(() => import('react-apexcharts'), { ssr: false });
 
 const CandlestickChart = () => {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const data = {
     series: [
       {
         data: [
-          // Each object represents [timestamp, open, high, low, close]
           {
             x: new Date(2023, 0, 1),
             y: [20000, 25000, 10000, 22000], // Jan
@@ -90,6 +96,8 @@ const CandlestickChart = () => {
       },
     },
   };
+
+  if (!isClient) return null;
 
   return (
     <div className="candlestick-chart">

@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import DashboardGridItem from '../components/DashboardGridItem';
 import Avatarheads from '../assets/images/avatarheads.png';
@@ -186,12 +187,14 @@ const Dashboard = ({}) => {
                 </div>
 
                 <div>
-                  <DonutChart />
+                  {' '}
+                  <DonutChart />{' '}
                 </div>
               </div>
             </div>
             <div className="w-full ">
-              <CandlestickChart />
+              {' '}
+              <CandlestickChart />{' '}
             </div>
           </div>
           <div className="w-[30%] h-full">

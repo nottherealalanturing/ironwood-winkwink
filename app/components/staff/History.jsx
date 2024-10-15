@@ -3,8 +3,11 @@ import React from 'react';
 const History = ({ history }) => {
   return (
     <div className="flex flex-col items-start justify-start overflow-auto">
-      {history.map((item) => (
-        <div className="flex items-center justify-between w-full py-2">
+      {history.map((item, index) => (
+        <div
+          key={index}
+          className="flex items-center justify-between w-full py-2"
+        >
           <div className="flex flex-col items-start justify-start gap-2">
             <p className="text-[#989898] font-campton text-xs font-semibold">
               {item?.month}
