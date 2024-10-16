@@ -1,14 +1,12 @@
 'use client';
 import React from 'react';
-import DashboardGridItem from '../components/DashboardGridItem';
-import Avatarheads from '../assets/images/avatarheads.png';
+import DashboardGridItem from '../../components/DashboardGridItem';
+import Avatarheads from '../../assets/images/avatarheads.png';
 import Image from 'next/image';
-import DashboardTables from '../components/DashboardTables';
-import Reminders from '../components/Reminders';
 import { CiSearch } from 'react-icons/ci';
 import { FaFilter, FaPlus } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
-import compavatar from '../assets/images/compavatar.png';
+import compavatar from '../../assets/images/compavatar.png';
 import { useRouter } from 'next/navigation';
 
 const griditems = [

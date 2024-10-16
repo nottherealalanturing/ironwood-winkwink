@@ -1,9 +1,9 @@
 import React from 'react';
-import DashboardGridItem from '../components/DashboardGridItem';
-import Avatarheads from '../assets/images/avatarheads.png';
+import DashboardGridItem from '../../components/DashboardGridItem';
+import Avatarheads from '../../assets/images/avatarheads.png';
 import Image from 'next/image';
-import DashboardTables from '../components/DashboardTables';
-import Reminders from '../components/Reminders';
+import DashboardTables from '../../components/DashboardTables';
+import Reminders from '../../components/Reminders';
 
 const griditems = [
   {

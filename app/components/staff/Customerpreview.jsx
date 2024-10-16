@@ -1386,7 +1386,7 @@ const CustomerPreview = ({ staff }) => {
               <p className="text-lg font-campton font-bold">
                 All Customers List
               </p>
-              <div className="flex-col md:flex-row items-start md:items-center justify-start gap-2">
+              <div className="flex flex-col md:flex-row md:flex-row items-start md:items-center justify-start gap-2">
                 <label
                   htmlFor="search"
                   className="bg-[#ffffff] p-1 flex items-center justify-start active:outline-none active:border-none"

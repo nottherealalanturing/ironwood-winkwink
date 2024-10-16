@@ -2,13 +2,13 @@
 import React, { useState } from 'react';
 import Reminders from '@/app/components/Reminders';
 import Image from 'next/image';
-import compavatar from '../../../assets/images/staffavatar.png';
+import compavatar from '../../../../assets/images/staffavatar.png';
 import StaffPreview from '@/app/components/staff/Staffpreview';
 import Payouts from '@/app/components/staff/Payouts';
 import History from '@/app/components/staff/History';
 import CustomerPreview from '@/app/components/staff/Customerpreview';
 import DashboardGridItem from '@/app/components/DashboardGridItem';
-import Avatarheads from '../../../assets/images/avatarheads.png';
+import Avatarheads from '../../../../assets/images/avatarheads.png';
 import { useParams } from 'next/navigation';
 
 const griditems = [

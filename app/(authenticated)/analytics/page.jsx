@@ -1,14 +1,13 @@
 'use client';
 import React from 'react';
-import DashboardGridItem from '../components/DashboardGridItem';
-import Avatarheads from '../assets/images/avatarheads.png';
+import DashboardGridItem from '../../components/DashboardGridItem';
+import Avatarheads from '../../assets/images/avatarheads.png';
 import Image from 'next/image';
-import DashboardTables from '../components/DashboardTables';
-import Reminders from '../components/Reminders';
+import Reminders from '../../components/Reminders';
 import { MdArrowDropDown, MdArrowRight } from 'react-icons/md';
-import { LoanedOutTRNIcon, RevenueTRNIcon } from '../assets/icons';
-import DonutChart from '../components/analytics/DonutChart';
-import CandlestickChart from '../components/analytics/CandleStick';
+import { LoanedOutTRNIcon, RevenueTRNIcon } from '../../assets/icons';
+import DonutChart from '../../components/analytics/DonutChart';
+import CandlestickChart from '../../components/analytics/CandleStick';
 
 const griditems = [
   {
