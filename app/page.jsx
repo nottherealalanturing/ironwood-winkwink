@@ -29,7 +29,7 @@ const Dashboard = ({}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {griditems.map(
             ({ text, total_amount, percentage, isProfit }, index) => (
               <DashboardGridItem
@@ -61,9 +61,9 @@ const Dashboard = ({}) => {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-start justify-start gap-2 p-2">
+        <div className="w-full flex flex-col md:flex-row items-start justify-start gap-2 p-2 overflow-auto">
           <DashboardTables />
-          <div className="w-[30%] h-full">
+          <div className="w-full md:w-[30%] h-full">
             <Reminders />
           </div>
         </div>

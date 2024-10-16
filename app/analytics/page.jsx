@@ -35,7 +35,7 @@ const Dashboard = ({}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {griditems.map(
             ({ text, total_amount, percentage, isProfit }, index) => (
               <DashboardGridItem
@@ -67,9 +67,9 @@ const Dashboard = ({}) => {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-start justify-start  gap-2 p-2">
-          <div className="grid grid-cols-1 gap-2  w-[70%] ">
-            <div className=" bg-none grid grid-cols-2 gap-2">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start gap-2 p-2">
+          <div className="grid grid-cols-1 gap-2  w-full md:w-[70%] ">
+            <div className=" bg-none grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full bg-[#FFFFFF] flex flex-col items-start justify-around px-6 py-8 ">
                 <div className="flex items-start justify-between w-full">
                   <p className="text-[#161718] font-campton text-lg font-black">
@@ -192,7 +192,7 @@ const Dashboard = ({}) => {
               </div>
             </div>
             <div className="w-full bg-[#FFFFFF] py-6 px-4 overflow-auto flex flex-col items-start justify-start">
-              <div className="flex items-center justify-between gap-2 w-full ">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-2 w-full ">
                 <p className="font-campton text-[#161718] text-xl font-bold">
                   Revenue Performance
                 </p>
@@ -242,7 +242,7 @@ const Dashboard = ({}) => {
               <CandlestickChart />
             </div>
           </div>
-          <div className="w-[30%] h-full ">
+          <div className="w-full md:w-[30%] h-full ">
             <Reminders />
           </div>
         </div>

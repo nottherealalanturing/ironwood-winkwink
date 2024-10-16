@@ -1492,7 +1492,7 @@ const Customer = ({ params }) => {
 
   return (
     <div className="flex flex-col items-start justify-start gap-2 w-full">
-      <div className="grid grid-cols-4 gap-4 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
         {griditems.map(({ text, color, number }, index) => (
           <CustomerGridItem
             color={color}
@@ -1505,7 +1505,7 @@ const Customer = ({ params }) => {
 
       <div className="flex items-start justify-between gap-2 w-full">
         <div className={'w-full bg-[#ffffff]'}>
-          <div className="flex items-center justify-between gap-2 py-14 px-5">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-2 py-14 px-5">
             <span className="flex items-center justify-start gap-2">
               <Image src={compavatar} alt="temp" />
 
@@ -1574,7 +1574,7 @@ const Customer = ({ params }) => {
             />
             <div
               role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              className="tab-content bg-base-100 border-base-300 rounded-box p-6 overflow-auto"
             >
               <Payouts payouts={customer.payouts} />
             </div>
@@ -1587,7 +1587,7 @@ const Customer = ({ params }) => {
             />
             <div
               role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              className="tab-content bg-base-100 border-base-300 rounded-box p-6 overflow-auto"
             >
               <History history={customer.history} />
             </div>

@@ -1381,12 +1381,12 @@ const CustomerPreview = ({ staff }) => {
     <div className="flex flex-col items-start justify-start w-full h-full ">
       <div className="w-full flex items-start justify-start gap-2 p-2">
         <div className="w-full">
-          <div className="flex items-center justify-between w-full">
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between w-full">
             <span className="flex items-center justify-start gap-5">
               <p className="text-lg font-campton font-bold">
                 All Customers List
               </p>
-              <div className="flex items-center justify-start gap-2">
+              <div className="flex-col md:flex-row items-start md:items-center justify-start gap-2">
                 <label
                   htmlFor="search"
                   className="bg-[#ffffff] p-1 flex items-center justify-start active:outline-none active:border-none"
@@ -1426,7 +1426,7 @@ const CustomerPreview = ({ staff }) => {
               <FaPlus /> Create Profile
             </button>
           </div>
-          <div className="grid grid-cols-4 gap-3">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
             {customersList.map((customer, index) => (
               <div
                 key={index}

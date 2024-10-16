@@ -951,7 +951,7 @@ const Dashboard = ({}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {griditems.map(
             ({ text, total_amount, percentage, isProfit }, index) => (
               <DashboardGridItem
@@ -985,10 +985,10 @@ const Dashboard = ({}) => {
         </div>
         <div className="w-full flex items-start justify-start gap-2 p-2">
           <div className="w-full">
-            <div className="flex items-center justify-between w-full">
+            <div className="flex flex-col items-start justify-start md:flex-row md:items-center md:justify-between w-full">
               <span className="flex items-center justify-start gap-5">
                 <p className="text-lg font-campton font-bold">All Staff List</p>
-                <div className="flex items-center justify-start gap-2">
+                <div className="flex flex-col md:flex-row items-center justify-start gap-2">
                   <label
                     htmlFor="search"
                     className="bg-[#ffffff] p-1 flex items-center justify-start active:outline-none active:border-none"
@@ -1029,11 +1029,11 @@ const Dashboard = ({}) => {
               </button>
             </div>
 
-            <div className="grid grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
               {staffList.map((staff, index) => (
                 <div
                   key={index}
-                  className="flex  items-center justify-between bg-[#F7F8F9] p-3"
+                  className="flex flex-col justify-center items-center md:flex-row md:justify-between bg-[#F7F8F9] p-3"
                   onClick={() => router.push(`company/staff/${staff.staffID}`)}
                 >
                   <div className="flex flex-col items-start justify-start gap-1">

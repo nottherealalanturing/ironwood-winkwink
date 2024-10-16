@@ -99,7 +99,7 @@ const CandlestickChart = () => {
   if (!isClient) return null;
 
   return (
-    <div className="candlestick-chart">
+    <div className="candlestick-chart w-full">
       <Chart
         options={data.options}
         series={data.series}

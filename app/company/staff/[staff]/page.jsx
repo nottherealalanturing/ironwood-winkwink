@@ -1010,8 +1010,8 @@ const Staff = ({ params }) => {
   console.log('pram', paramss);
 
   return (
-    <div className="flex flex-col items-start justify-start gap-2 w-full">
-      <div className="grid grid-cols-4 gap-4">
+    <div className="flex flex-col items-center justify-center md:items-start md:justify-start gap-2 w-full">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
         {griditems.map(
           ({ text, total_amount, percentage, isProfit }, index) => (
             <DashboardGridItem
@@ -1043,8 +1043,12 @@ const Staff = ({ params }) => {
           </div>
         </div>
       </div>
-      <div className="flex items-start justify-between gap-2 w-full">
-        <div className={`${showReminder ? 'w-[70%]' : 'w-full'} bg-[#ffffff]`}>
+      <div className="flex flex-col md:flex-row justify-center items-start md:justify-between gap-2 w-full">
+        <div
+          className={`${
+            showReminder ? 'w-full md:w-[70%]' : 'w-full'
+          } bg-[#ffffff]`}
+        >
           <div className="flex items-center justify-start gap-2 py-14 px-5">
             <Image src={compavatar} alt="temp" />
 
@@ -1108,7 +1112,7 @@ const Staff = ({ params }) => {
             />
             <div
               role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              className="tab-content bg-base-100 border-base-300 rounded-box p-6 overflow-auto"
             >
               <Payouts payouts={staff.payouts} />
             </div>
@@ -1122,7 +1126,7 @@ const Staff = ({ params }) => {
             />
             <div
               role="tabpanel"
-              className="tab-content bg-base-100 border-base-300 rounded-box p-6"
+              className="tab-content bg-base-100 border-base-300 rounded-box p-6 overflow-auto"
             >
               <History history={staff.history} />
             </div>
