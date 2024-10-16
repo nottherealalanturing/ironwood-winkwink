@@ -10,7 +10,7 @@ const DashboardGridItem = ({ text, total_amount, percentage, isProfit }) => {
         <p className="font-campton font-semibold text-sm text-[#B1B2B2]">
           {text}
         </p>
-        <p className="font-campton font-black text-xl text-[#161718]">
+        <p className="font-campton font-black text-sm md:text-xl text-[#161718]">
           {total_amount}
         </p>
         {isProfit ? (
@@ -25,7 +25,7 @@ const DashboardGridItem = ({ text, total_amount, percentage, isProfit }) => {
           </div>
         )}
       </div>
-      <div>
+      <div className="hidden md:block">
         <DashboardGridGraph />
       </div>
     </div>

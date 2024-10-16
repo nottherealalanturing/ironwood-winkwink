@@ -35,7 +35,7 @@ const Dashboard = ({}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {griditems.map(
             ({ text, total_amount, percentage, isProfit }, index) => (
               <DashboardGridItem
@@ -67,9 +67,9 @@ const Dashboard = ({}) => {
             </div>
           </div>
         </div>
-        <div className="w-full flex items-start justify-start  gap-2 p-2">
-          <div className="grid grid-cols-1 gap-2  w-[70%] ">
-            <div className=" bg-none grid grid-cols-2 gap-2">
+        <div className="w-full flex flex-col md:flex-row items-center justify-center md:items-start md:justify-start gap-2 p-2">
+          <div className="grid grid-cols-1 gap-2  w-full md:w-[70%] ">
+            <div className=" bg-none grid grid-cols-1 md:grid-cols-2 gap-2">
               <div className="w-full bg-[#FFFFFF] flex flex-col items-start justify-around px-6 py-8 ">
                 <div className="flex items-start justify-between w-full">
                   <p className="text-[#161718] font-campton text-lg font-black">
@@ -187,17 +187,62 @@ const Dashboard = ({}) => {
                 </div>
 
                 <div>
-                  {' '}
-                  <DonutChart />{' '}
+                  <DonutChart />
                 </div>
               </div>
             </div>
-            <div className="w-full ">
-              {' '}
-              <CandlestickChart />{' '}
+            <div className="w-full bg-[#FFFFFF] py-6 px-4 overflow-auto flex flex-col items-start justify-start">
+              <div className="flex flex-col md:flex-row items-center justify-between gap-2 w-full ">
+                <p className="font-campton text-[#161718] text-xl font-bold">
+                  Revenue Performance
+                </p>
+                <span>
+                  <div className="flex flex-col items-center justify-center">
+                    <p className="font-campton text-[#161718] text-xl font-bold">
+                      Revenue
+                    </p>
+                    <p className="text-[#B1B2B2] text-base font-campton font-bold">
+                      in thousand
+                    </p>
+                  </div>
+                </span>
+
+                <div className="flex justify-start gap-4 items-start">
+                  <button className="font-campton text-xs text-[#FFFFFF] bg-[#002448] border border-[#002448] py-4 px-6">
+                    Switch
+                  </button>
+                  <div className="dropdown">
+                    <div
+                      tabIndex={0}
+                      role="button"
+                      className="btn bg-none border rounded-none border-[#B1B2B2] hover:bg-none"
+                    >
+                      <div className="flex flex-col items-start justify-start gap-0 ">
+                        <p className="font-campton text-base font-normal leading-none text-[#B1B2B2]">
+                          Today
+                        </p>
+                      </div>
+
+                      <MdArrowDropDown color="#161718" />
+                    </div>
+                    <ul
+                      tabIndex={0}
+                      className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
+                    >
+                      <li>
+                        <a>Last Week</a>
+                      </li>
+                      <li>
+                        <a>Last Month</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <CandlestickChart />
             </div>
           </div>
-          <div className="w-[30%] h-full">
+          <div className="w-full md:w-[30%] h-full ">
             <Reminders />
           </div>
         </div>

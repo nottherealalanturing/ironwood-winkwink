@@ -67,7 +67,7 @@ const customer = [
 const Reminders = ({ showReminder = true }) => {
   return (
     <div
-      className={`flex flex-col items-center justify-start overflow-auto bg-[#ffffff] p-4 ${
+      className={` flex flex-col items-center justify-start overflow-auto bg-[#ffffff] p-4 ${
         showReminder ? 'flex' : 'hidden'
       }`}
     >

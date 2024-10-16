@@ -49,7 +49,7 @@ const Dashboard = ({}) => {
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
           {griditems.map(
             ({ text, total_amount, percentage, isProfit }, index) => (
               <DashboardGridItem
@@ -142,14 +142,14 @@ const Dashboard = ({}) => {
                 <DebitSurgeIcon />
               </div>
             </div>
-            <div className="flex items-center justify-center flex-col gap-4 w-full my-6">
+            <div className="flex flex-row items-center justify-center md:flex-col gap-4 w-full my-6">
               <button
-                className="font-campton font-bold text-base text-[#FFFFFF] bg-[#002448] border border-[#002448] w-1/4 p-6"
+                className="font-campton font-bold text-base text-[#FFFFFF] bg-[#002448] border border-[#002448] w-full md:w-1/4 p-6"
                 onClick={() => setshowModal(true)}
               >
                 Transfer
               </button>
-              <button className="font-campton font-bold text-base text-[#002448] bg-[#ffffff] border border-[#002448] p-6 w-1/4">
+              <button className="font-campton font-bold text-base text-[#002448] bg-[#ffffff] border border-[#002448] p-6 w-full md:w-1/4">
                 Manage Rates
               </button>
             </div>

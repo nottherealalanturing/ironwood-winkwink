@@ -22,6 +22,7 @@ const DonutChart = () => {
     colors: ['#FF8D4E', '#002448', '#CCD3DA'],
     legend: {
       position: 'right',
+      enabled: false,
     },
     dataLabels: {
       enabled: false,
