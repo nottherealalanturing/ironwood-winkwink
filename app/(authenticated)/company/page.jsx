@@ -1,5 +1,5 @@
 'use client';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import DashboardGridItem from '../../components/DashboardGridItem';
 import Avatarheads from '../../assets/images/avatarheads.png';
 import Image from 'next/image';
@@ -8,6 +8,8 @@ import { FaFilter, FaPlus } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
 import compavatar from '../../assets/images/compavatar.png';
 import { useRouter } from 'next/navigation';
+import { useAppSelector } from '@/redux/hooks/hooks';
+import { toast } from 'react-toastify';
 
 const griditems = [
   {
@@ -30,7 +32,7 @@ const griditems = [
   },
 ];
 
-const staffList = [
+/* const staffList = [
   {
     staffID: '001',
     staffDetails: {
@@ -941,11 +943,29 @@ const staffList = [
       },
     ],
   },
-];
+]; */
 
 const Dashboard = ({}) => {
-  const router = useRouter();
+  const notify = () => toast.error("Can't create staff at this time!");
 
+  const router = useRouter();
+  const { company } = useAppSelector((state) => state.companySlice);
+
+  const [searchValue, setSearchValue] = useState('');
+  const [companyList, setCompanyList] = useState(company);
+
+  useEffect(() => {
+    if (searchValue === '') {
+      setCompanyList(company);
+    } else {
+      const filteredData = company.filter((item) =>
+        item?.staffDetails.name
+          .toLowerCase()
+          .includes(searchValue.toLowerCase())
+      );
+      setCompanyList(filteredData);
+    }
+  }, [company, searchValue]);
   return (
     <>
       <div className="flex flex-col items-start justify-start w-full h-full">
@@ -996,6 +1016,10 @@ const Dashboard = ({}) => {
                       id="search"
                       placeholder="Search"
                       className="border-none bg-none"
+                      onChange={(e) => {
+                        setSearchValue(e.target.value);
+                      }}
+                      value={searchValue}
                     />
                     <CiSearch />
                   </label>
@@ -1011,24 +1035,20 @@ const Dashboard = ({}) => {
                     <ul
                       tabIndex={0}
                       className="dropdown-content menu bg-base-100 rounded-box z-[1] w-52 p-2 shadow"
-                    >
-                      <li>
-                        <a>A-Z</a>
-                      </li>
-                      <li>
-                        <a>Z-A</a>
-                      </li>
-                    </ul>
+                    ></ul>
                   </div>
                 </div>
               </span>
-              <button className="font-campton text-base font-bold text-[#FFFFFF] bg-[#002448] border border-[#002448] py-2 px-4 flex items-center justify-center gap-2">
+              <button
+                className="font-campton text-base font-bold text-[#FFFFFF] bg-[#002448] border border-[#002448] py-2 px-4 flex items-center justify-center gap-2"
+                onClick={notify}
+              >
                 <FaPlus /> Create Profile
               </button>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
-              {staffList.map((staff, index) => (
+              {companyList?.map((staff, index) => (
                 <div
                   key={index}
                   className="flex flex-col justify-center items-center md:flex-row md:justify-between bg-[#F7F8F9] p-3"

@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Ironwood Loan App (Loan Officer Feature)
 
-## Getting Started
+Ironwood is a loan application built using **React**, **TailwindCSS**, **Toastify**, and **Redux**. This project focuses on the Loan Officer feature, which was built as part of the Ironwood loan management system.
 
-First, run the development server:
+## Technologies Used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **React**: Frontend framework used to build the user interface.
+- **TailwindCSS**: Utility-first CSS framework used for styling.
+- **Redux**: State management library for managing the application state.
+- **Toastify**: Notification library used to display toast notifications.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+The current version of the Ironwood Loan App includes the following features for Loan Officers:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- **Customer Pages**: View customer details including current loans and personal information.
+- **Staff Pages**: Loan officers can administer loans to customers.
+- **Analytics Page**: View loan statistics and performance analytics.
+- **Transfer Feature**: Facilitates funding of loans through transfers.
 
-## Learn More
+## Installation
 
-To learn more about Next.js, take a look at the following resources:
+1. Clone the repository:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```
+   git clone https://github.com/nottherealalanturing/ironwood-winkwink.git
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Navigate to the project directory:
 
-## Deploy on Vercel
+   ```
+   cd ironwood-winkwink
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. Install the dependencies:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```
+   npm start
+   ```
+
+## Available Scripts
+
+In the project directory, you can run the following scripts:
+
+- `npm start`: Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- `npm run build`: Builds the app for production to the `build` folder.
+
+## Usage
+
+Once the app is running, Loan Officers can log in to view loan applications and manage them. The app provides a simple and intuitive interface for handling loan approvals and rejections.
+
+## Future Improvements
+
+This project currently focuses only on the Loan Officer feature. Future updates will include:
+
+- **Messaging**: A messaging system for loan officers to communicate with customers.
+- **Account Settings**: Personalize settings for loan officers and customers.
+- **Additional User Types**: More roles and features for different user types, such as admins and auditors.
+- **Additional features for loan applicants**.
+
+## Contributing
+
+If you'd like to contribute, please create a fork of the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License.

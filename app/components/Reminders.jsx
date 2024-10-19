@@ -1,4 +1,7 @@
+'use client';
 import React from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const customer = [
   {
@@ -65,6 +68,8 @@ const customer = [
 ];
 
 const Reminders = ({ showReminder = true }) => {
+  const notify = () => toast('Reminder sent!');
+
   return (
     <div
       className={` flex flex-col items-center justify-start overflow-auto bg-[#ffffff] p-4 ${
@@ -91,7 +96,10 @@ const Reminders = ({ showReminder = true }) => {
                 {item.amount}
               </p>
             </div>
-            <button className="font-campton text-[#ffffff] text-sm p-4 bg-[#002448]">
+            <button
+              className="font-campton text-[#ffffff] text-sm p-4 bg-[#002448]"
+              onClick={notify}
+            >
               Send Reminder
             </button>
           </div>
