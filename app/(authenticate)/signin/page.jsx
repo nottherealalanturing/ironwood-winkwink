@@ -15,7 +15,6 @@ const Signin = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Basic validation
     if (!email || !password) {
       setError('Please fill out both fields.');
       toast.error(`Invalid username or password`, {
@@ -24,9 +23,7 @@ const Signin = () => {
       return;
     }
 
-    // Check if email and password are both 'admin'
     if (email === 'admin' && password === 'admin') {
-      // Redirect to the dashboard (update this to match your routing setup)
       toast.success(`Signin succesful`, {
         autoClose: 1000,
       });
@@ -99,7 +96,7 @@ const Signin = () => {
 
         {error && <p className="text-red-500">{error}</p>}
 
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
+        {/* <div className="flex flex-col md:flex-row md:items-center md:justify-between w-full">
           <div className="flex items-start ">
             <div className="flex items-center h-5">
               <input
@@ -126,7 +123,9 @@ const Signin = () => {
           <a href="#" className="lg:text-nowrap">
             Forgotten Password?
           </a>
-        </div>
+        </div> */}
+
+        <p>use &quot;admin&quot; for login and password</p>
 
         <button
           onClick={handleLogin}

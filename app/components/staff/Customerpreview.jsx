@@ -6,6 +6,7 @@ import { CiSearch } from 'react-icons/ci';
 import { FaFilter, FaPlus } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
 import { useRouter } from 'next/navigation';
+import { toast } from 'react-toastify';
 
 const customersList = [
   {
@@ -1376,6 +1377,8 @@ const customersList = [
 ];
 
 const CustomerPreview = ({ staff }) => {
+  const notify = () => toast.error("Can't create customer at this time!");
+
   const router = useRouter();
   return (
     <div className="flex flex-col items-start justify-start w-full h-full ">
@@ -1422,7 +1425,10 @@ const CustomerPreview = ({ staff }) => {
                 </div>
               </div>
             </span>
-            <button className="font-campton text-base font-bold text-[#FFFFFF] bg-[#002448] border border-[#002448] py-2 px-4 flex items-center justify-center gap-2">
+            <button
+              className="font-campton text-base font-bold text-[#FFFFFF] bg-[#002448] border border-[#002448] py-2 px-4 flex items-center justify-center gap-2"
+              onClick={notify}
+            >
               <FaPlus /> Create Profile
             </button>
           </div>

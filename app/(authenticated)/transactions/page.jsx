@@ -36,6 +36,7 @@ const griditems = [
 
 const Dashboard = ({}) => {
   const router = useRouter();
+  const [amount, setAmount] = useState(0);
 
   const [showModal, setshowModal] = useState(false);
 
